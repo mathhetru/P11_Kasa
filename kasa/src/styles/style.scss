@@ -6,19 +6,21 @@
 @import "./layout/about";
 @import "./layout/404";
 @import "./layout/footer";
-// @import "./components/btn";
-// @import "./components/spinerloader";
+// @import "./components/tag";
+// @import "./components/dropdown";
+// @import "./components/carrousel";
+// @import "./components/stars";
 
-// // MAIN ELEMENTS
+// MAIN ELEMENTS
 * {
   box-sizing: border-box;
 }
 * a {
   text-decoration: none;
-  color: black;
+  color: $red;
 }
-// body{
-//     font-family: $main-font;
-//     width: 100%;
-//     margin: auto;
-// }
+body {
+  font-family: $main-font;
+  width: 100vw;
+  margin: auto;
+}

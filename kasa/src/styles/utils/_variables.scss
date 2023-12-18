@@ -15,10 +15,23 @@ $gradient: linear-gradient($red, $black);
 //FONTS
 $main-font: "Montserrat", sans-serif;
 
-//WEIGHTS & SIZES
-$weight-title: bold;
-$weight-subtitle: normal;
-$size-title: 1.5rem;
-$size-subtitle: 1rem;
-// 36 24 18 14 288 desktop
-// 18 14 13 12 10 96 mobile 
+//WEIGHTS
+$weight-bold: 700;
+$weight-normal: 500;
+$weight-light: 400;
+
+//SIZES
+//desktop
+$size-desk-404: 18rem;
+$size-desk-title: 2.25rem;
+$size-desk-subtitle: 1.5rem;
+$size-desk-text: 1.125rem;
+$size-desk-small: 0.875rem;
+
+//mobile
+$size-mob-404: 6rem;
+$size-desk-title: 1.125rem;
+$size-desk-subtitle: 0.875rem;
+$size-desk-text: 0.8125rem;
+$size-desk-small: 0.75rem;
+$size-desk-tag: 0.625rem;
