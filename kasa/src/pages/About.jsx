@@ -1,7 +1,11 @@
+import Banner from "../components/Banner";
+import Dropdown from "../components/Dropdown";
+
 function About() {
   return (
     <div>
-      <h1>Questionnaire 🧮</h1>
+      <Banner />
+      <Dropdown />
     </div>
   );
 }
