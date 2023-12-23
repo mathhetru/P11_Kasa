@@ -1,0 +1,18 @@
+.header {
+  max-width: 1040px;
+  margin: 1.5625rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &-nav {
+    font-size: $size-desk-subtitle;
+    font-weight: $weight-normal;
+    &__link {
+      margin-left: 3.125rem;
+    }
+    &__link:hover {
+      text-decoration: underline;
+      transition: 0.2s linear;
+    }
+  }
+}

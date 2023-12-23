@@ -1,10 +1,7 @@
 function Card() {
   return (
     <div>
-      <h1>Title</h1>
-      <div>
-        <img src="" alt="" />
-      </div>
+      <h1>CARD TITLE</h1>
     </div>
   );
 }
