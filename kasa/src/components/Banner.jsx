@@ -1,7 +1,7 @@
 function Banner(props) {
   return (
-    <aside>
-      <h1>{props.sentence}</h1>
+    <aside className="banner-background">
+      {props.sentence}
       <div>
         <img src={props.img} alt="banner-background" className="banner-background__img" />
       </div>

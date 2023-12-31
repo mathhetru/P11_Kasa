@@ -1,0 +1,25 @@
+.banner-background {
+  position: relative;
+  max-width: 1240px;
+  max-height: 223px;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  &__text {
+    position: absolute;
+    color: $white;
+    font-size: $size-desk-banner;
+    font-weight: $weight-normal;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $black;
+    opacity: 0.3;
+  }
+}
