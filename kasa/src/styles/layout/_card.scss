@@ -12,7 +12,7 @@
     color: $white;
     font-size: $size-desk-text;
     font-weight: $weight-normal;
-    padding: 0 0 10px 20px;
+    padding: 10px 20px;
   }
   &::before {
     content: "";
@@ -21,5 +21,19 @@
     height: 100%;
     background: $gradient;
     opacity: 0.3;
+  }
+  &-picture {
+    height: 100%;
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &:hover {
+    &::before {
+      opacity: 0.6;
+      transition: 0.2s linear;
+    }
   }
 }
