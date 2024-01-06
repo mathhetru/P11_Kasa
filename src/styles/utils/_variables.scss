@@ -5,9 +5,11 @@ $white: #ffffff;
 $grey: #f6f6f6;
 $black: #000000;
 $red: #ff6060;
+$transparent: transparent;
 
 //GRADIENTS
-$gradient: linear-gradient($red, $black);
+$gradient-red: linear-gradient($red, $black);
+$gradient-black: linear-gradient($transparent, $black);
 
 //MARGINS
 // $base-margin: 0px 20px;

@@ -19,7 +19,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: $gradient;
+    background: $gradient-black;
     opacity: 0.3;
   }
   &-picture {
@@ -32,8 +32,9 @@
   }
   &:hover {
     &::before {
-      opacity: 0.6;
-      transition: 0.2s linear;
+      // background: $gradient-red;
+      opacity: 0.86;
+      transition: 0.3s ease-in-out;
     }
   }
 }
