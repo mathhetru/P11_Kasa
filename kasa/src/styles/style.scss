@@ -4,13 +4,13 @@
 @import "./layout/banner";
 @import "./layout/card";
 @import "./layout/home";
-@import "./layout/accomodation-sheet";
+@import "./layout/housing";
 @import "./layout/about";
 @import "./layout/404";
 @import "./layout/footer";
-// @import "./components/tag";
+@import "./components/tag";
 // @import "./components/dropdown";
-// @import "./components/carrousel";
+@import "./components/carousel";
 // @import "./components/stars";
 
 // MAIN ELEMENTS
@@ -23,6 +23,6 @@
 }
 body {
   font-family: $main-font;
-  width: 100vw;
   margin: auto;
+  color: $red;
 }

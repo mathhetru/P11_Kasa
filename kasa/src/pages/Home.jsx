@@ -10,17 +10,10 @@ const sentenceForBanner = () => {
 function Home() {
   return (
     <div className="home">
-      <div></div>
-      <Banner img={background} sentence={sentenceForBanner()} />
+      <Banner img={background}>{sentenceForBanner()}</Banner>
       <aside className="home-greycard">
         {data.map((house) => (
-          <Card
-            img={house.cover}
-            key={house.id}
-            value={house.id}
-            id={house.id}
-            title={house.title}
-          />
+          <Card img={house.cover} key={house.id} id={house.id} title={house.title} />
         ))}
       </aside>
     </div>

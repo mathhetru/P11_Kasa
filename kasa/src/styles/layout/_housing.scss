@@ -1,0 +1,43 @@
+.housing {
+  max-width: 1240px;
+  margin: auto;
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  &-header-description {
+    &__title {
+      margin: 0;
+      font-size: $size-desk-title;
+      font-weight: $weight-normal;
+    }
+    &__subtitle {
+      margin: 5px 0;
+      font-size: $size-desk-subtitle;
+      font-weight: $weight-normal;
+    }
+  }
+  &-header-host {
+    display: flex;
+    align-items: center;
+    &__name {
+      text-align: end;
+      margin-right: 20px;
+      max-width: 93px;
+      font-size: $size-desk-text;
+      font-weight: $weight-normal;
+    }
+    &-picture {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 70px;
+      height: 70px;
+      &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
