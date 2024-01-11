@@ -1,6 +1,7 @@
 import Carousel from "../components/Carousel";
-import Collapse from "../components/Collapse";
-import Tag from "../components/Tag";
+import Collapsible from "../components/Collapsible";
+import Tags from "../components/Tags";
+import RatingStars from "../components/RatingStars";
 import data from "../data/housing.json";
 import { useParams } from "react-router-dom";
 
@@ -8,9 +9,8 @@ function Housing() {
   const { id } = useParams();
   const house = data.find((house) => house.id === id);
 
-  const contentCollapse = (content) => {
+  const EquipmentsCollapsible = (content) => {
     if (content.equipments) {
-      console.log(content);
       return (
         <div>
           {content.equipments.map((equipment, index) => (
@@ -19,9 +19,10 @@ function Housing() {
         </div>
       );
     }
-    // else {
-    //   return <p>{content}</p>;
-    // }
+  };
+
+  const descriptionCollapsible = (content) => {
+    return <p>{content}</p>;
   };
 
   return (
@@ -43,11 +44,18 @@ function Housing() {
           </div>
         </div>
       </div>
-
-      <Tag tags={house.tags} />
-      {/* ? Voir pour les stars ? */}
-      <Collapse>{contentCollapse(house)}</Collapse>
-      <Collapse>{contentCollapse(house.description)}</Collapse>
+      <div className="housing-tags-stars__group">
+        <Tags tags={house.tags} />
+        <RatingStars stars={house.rating} />
+      </div>
+      <div className="housing-description">
+        <Collapsible title={"Description"} halfCollapsible={"half"}>
+          {descriptionCollapsible(house.description)}
+        </Collapsible>
+        <Collapsible title={"Equipements"} halfCollapsible={"half"}>
+          {EquipmentsCollapsible(house)}
+        </Collapsible>
+      </div>
     </div>
   );
 }

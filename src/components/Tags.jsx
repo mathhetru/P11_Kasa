@@ -1,4 +1,4 @@
-function Tag(props) {
+function Tags(props) {
   return (
     <div className="tags">
       {props.tags.map((tag, index) => (
@@ -10,4 +10,4 @@ function Tag(props) {
   );
 }
 
-export default Tag;
+export default Tags;

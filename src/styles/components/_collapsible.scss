@@ -1,0 +1,50 @@
+.collapsible {
+  border-radius: 10px;
+  font-size: $size-desk-small;
+  margin-top: 20px;
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: $red;
+    border: none;
+    border-radius: 10px;
+  }
+  &__title {
+    font-family: $main-font;
+    color: $white;
+    font-size: $size-desk-text;
+    font-weight: $weight-normal;
+  }
+  &__content {
+    z-index: -1000;
+    position: relative;
+    top: -10px;
+    background-color: $grey;
+    color: $red;
+    font-size: $size-desk-text;
+    font-weight: $weight-normal;
+    padding: 15px 20px 10px 20px;
+    border-radius: 0 0 10px 10px;
+  }
+  &__arrow {
+    background: url(../../assets/kasa_arrow-right-white.svg) no-repeat center;
+    background-size: cover;
+    margin-right: 10px;
+    width: 13px;
+    height: 24px;
+    &--open {
+      transform: rotate(90deg);
+      transition: 0.2s ease-in-out;
+    }
+    &--close {
+      transform: rotate(-90deg);
+      transition: 0.2s ease-in-out;
+    }
+  }
+}
+
+.half {
+  width: 48%;
+}

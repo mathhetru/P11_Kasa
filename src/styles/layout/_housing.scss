@@ -40,4 +40,13 @@
       }
     }
   }
+  &-tags-stars__group {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-description {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
