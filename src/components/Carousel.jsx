@@ -9,6 +9,10 @@ function Carousel(props) {
     return currentIndex + 1 + "/" + picturesLength;
   };
 
+  const ifMoreThanOnePicture = () => {
+    return picturesLength > 1;
+  };
+
   const nextPicture = () => {
     if (currentIndex === props.pictures.length - 1) {
       setCurrentIndex(0);
@@ -27,17 +31,20 @@ function Carousel(props) {
 
   return (
     <div className="carousel">
-      <button className="carousel__buttons button-left" onClick={previousPicture} />
-      {/* pourquoi "onClick={previousPicture()}" cause une erreur et pas "onClick={previousPicture}" ?*/}
+      {ifMoreThanOnePicture && (
+        <button className="carousel__buttons button-left" onClick={previousPicture} />
+      )}
       <div className="carousel-picture">
         <img
           src={props.pictures[currentIndex]}
           alt="example of the house"
           className="carousel-picture__img"
         />
-        <p className="carousel-picture__count">{picturesCount()}</p>
+        {ifMoreThanOnePicture && <p className="carousel-picture__count">{picturesCount()}</p>}
       </div>
-      <button className="carousel__buttons button-right" onClick={nextPicture} />
+      {ifMoreThanOnePicture && (
+        <button className="carousel__buttons button-right" onClick={nextPicture} />
+      )}
     </div>
   );
 }

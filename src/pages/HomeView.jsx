@@ -15,6 +15,7 @@ function Home() {
 
   return (
     <div className="home">
+
       <Banner img={background}>{sentenceForBanner()}</Banner>
       <aside className="home-greycard">
         {data.map((house) => (

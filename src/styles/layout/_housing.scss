@@ -1,10 +1,10 @@
 .housing {
   max-width: 1240px;
-  margin: auto;
+  margin: 10px auto 50px auto;
   &-header {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin-top: 20px;
   }
   &-header-description {
     &__title {
@@ -21,6 +21,11 @@
   &-header-host {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    &__group {
+      display: flex;
+      align-items: center;
+    }
     &__name {
       text-align: end;
       margin-right: 20px;
@@ -40,14 +45,44 @@
       }
     }
   }
-  &-tags-stars__group {
-    display: flex;
-    justify-content: space-between;
-  }
   &-description {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
     gap: 2rem;
+  }
+}
+
+// BREAKPOINT PHONE HOUSING
+@media screen and (max-width: 1024px) {
+  .housing {
+    max-width: 90%;
+    margin: auto;
+    &-header {
+      flex-direction: column;
+    }
+    &-header-description {
+      &__title {
+        font-size: $size-phone-title;
+      }
+      &__subtitle {
+        font-size: $size-phone-subtitle;
+      }
+    }
+    &-header-host {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      &__name {
+        font-size: $size-phone-small;
+        max-width: 50px;
+      }
+      &-picture {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    &-description {
+      display: block;
+    }
   }
 }

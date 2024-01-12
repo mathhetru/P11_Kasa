@@ -3,4 +3,16 @@
   width: 200px;
   display: flex;
   justify-content: space-around;
+  margin-top: 15px;
+}
+
+// BREAKPOINT PHONE STARS
+@media screen and (max-width: 1024px) {
+  .stars {
+    width: 100px;
+    &__img {
+      width: 13px;
+      height: 13px;
+    }
+  }
 }

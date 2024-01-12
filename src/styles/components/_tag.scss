@@ -1,6 +1,7 @@
 .tags {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 15px;
 }
 .tag {
   margin: 0 10px 10px 0;
@@ -10,4 +11,11 @@
   border-radius: 10px;
   font-size: $size-desk-small;
   font-weight: $weight-normal;
+}
+
+// BREAKPOINT PHONE TAGS
+@media screen and (max-width: 1024px) {
+  .tag {
+    font-size: $size-phone-tag;
+  }
 }

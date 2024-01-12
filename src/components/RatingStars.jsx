@@ -6,9 +6,9 @@ function Stars(props) {
 
   while (stars.length < 5) {
     if (stars.length < props.stars) {
-      stars.push(<img src={redStar} alt="red star" key={stars.length} />);
+      stars.push(<img src={redStar} alt="red star" key={stars.length} className="stars__img" />);
     } else {
-      stars.push(<img src={greyStar} alt="grey star" key={stars.length} />);
+      stars.push(<img src={greyStar} alt="grey star" key={stars.length} className="stars__img" />);
     }
   }
 

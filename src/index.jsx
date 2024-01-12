@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Loader from "./components/Loader";
 import AboutView from "./pages/AboutView";
 import HomeView from "./pages/HomeView";
 import HousingView from "./pages/HousingView";
@@ -13,6 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
+      <Loader />
       <Header />
       <Routes>
         <Route path="/" element={<HomeView />} />
