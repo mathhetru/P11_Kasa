@@ -31,7 +31,7 @@ function Carousel(props) {
 
   return (
     <div className="carousel">
-      {ifMoreThanOnePicture && (
+      {ifMoreThanOnePicture() && (
         <button className="carousel__buttons button-left" onClick={previousPicture} />
       )}
       <div className="carousel-picture">
@@ -40,9 +40,9 @@ function Carousel(props) {
           alt="example of the house"
           className="carousel-picture__img"
         />
-        {ifMoreThanOnePicture && <p className="carousel-picture__count">{picturesCount()}</p>}
+        {ifMoreThanOnePicture() && <p className="carousel-picture__count">{picturesCount()}</p>}
       </div>
-      {ifMoreThanOnePicture && (
+      {ifMoreThanOnePicture() && (
         <button className="carousel__buttons button-right" onClick={nextPicture} />
       )}
     </div>
