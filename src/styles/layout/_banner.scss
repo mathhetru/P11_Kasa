@@ -23,3 +23,15 @@
     opacity: 0.3;
   }
 }
+
+// BREAKPOINT PHONE BANNER
+@media screen and (max-width: 1024px) {
+  .banner-background {
+    max-width: 90%;
+    max-height: 111px;
+    border-radius: 10px;
+    &__text {
+      font-size: $size-phone-banner;
+    }
+  }
+}

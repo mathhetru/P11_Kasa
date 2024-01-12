@@ -9,3 +9,14 @@
   padding: 50px 0;
   gap: 60px;
 }
+
+// BREAKPOINT PHONE HOME
+@media screen and (max-width: 1024px) {
+  .home-greycard {
+    background-color: $white;
+    grid-template-columns: 90%;
+    margin: auto;
+    padding: 30px 0;
+    gap: 30px;
+  }
+}

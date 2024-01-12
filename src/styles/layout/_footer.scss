@@ -18,3 +18,22 @@
     margin: 0 0 20px 0;
   }
 }
+
+// BREAKPOINT PHONE FOOTER
+@media screen and (max-width: 1024px) {
+  .footer {
+    margin-top: 10px;
+    &-insert {
+      max-width: 90%;
+    }
+    &__link {
+      padding: 50px 0 10px 0;
+    }
+    &__text {
+      text-align: center;
+      width: 122px;
+      font-size: $size-phone-small;
+      margin: 0 0 50px 0;
+    }
+  }
+}

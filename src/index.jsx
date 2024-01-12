@@ -18,8 +18,7 @@ root.render(
         <Route path="/" element={<HomeView />} />
         <Route path="/about" element={<AboutView />} />
         <Route path="/housing/:id" element={<HousingView />} />
-        {/* <Route path="/housing/*" element={<HomeView />} /> */}
-        <Route path="/*" element={<ErrorView />} />
+        <Route path="*" element={<ErrorView />} />
       </Routes>
       <Footer />
     </Router>

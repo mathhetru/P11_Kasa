@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function errorPage() {
+function ErrorPage() {
+  useEffect(() => {
+    document.title = "Kasa | 404";
+  });
+
   return (
     <div className="error">
       <h1 className="error__title">404</h1>
@@ -12,4 +17,4 @@ function errorPage() {
   );
 }
 
-export default errorPage;
+export default ErrorPage;

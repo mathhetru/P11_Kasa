@@ -1,3 +1,10 @@
+import { PropTypes } from "prop-types";
+
+Banner.propTypes = {
+  children: PropTypes.node,
+  img: PropTypes.string.isRequired,
+};
+
 function Banner(props) {
   return (
     <aside className="banner-background">

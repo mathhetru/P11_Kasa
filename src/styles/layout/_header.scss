@@ -16,3 +16,24 @@
     }
   }
 }
+
+// BREAKPOINT PHONE HEADER
+@media screen and (max-width: 1024px) {
+  .header {
+    max-width: 90%;
+    margin: 20px auto;
+    &__logo {
+      width: 145px;
+    }
+    &-nav {
+      width: 50%;
+      display: flex;
+      justify-content: space-evenly;
+      font-size: $size-phone-small;
+      &__link {
+        text-transform: uppercase;
+        margin-left: 0;
+      }
+    }
+  }
+}

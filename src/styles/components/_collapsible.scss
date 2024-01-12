@@ -5,6 +5,7 @@
   &__button {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 10px;
     background-color: $red;
@@ -45,6 +46,20 @@
   }
 }
 
-.half {
-  width: 48%;
+// BREAKPOINT PHONE COLLAPSIBLE
+@media screen and (max-width: 1024px) {
+  .collapsible {
+    margin-top: 20px;
+    &__title {
+      font-size: $size-phone-text;
+    }
+    &__content {
+      font-size: $size-phone-small;
+      padding: 10px 15px 5px 15px;
+    }
+    &__arrow {
+      width: 11px;
+      height: 19px;
+    }
+  }
 }

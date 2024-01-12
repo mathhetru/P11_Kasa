@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 function Collapsible(props) {
   const [open, setOPen] = useState(false);
-  // info: open est une variable d'état et setOpen est une function pour maj l'état de open. Equivalent de open = ref("false") et setOpen = computed(() => open.value = "true") en vue.js
+  // info: open est une variable d'état et setOpen est une function pour maj l'état de open.
+  // Equivalent de open = ref("false") et setOpen = computed(() => open.value = "true") en vue.js
 
   const arrowDirection = () => {
     return open ? (
@@ -12,13 +13,13 @@ function Collapsible(props) {
     );
   };
 
-  const toggle = () => {
+  const handleClickCollapsible = () => {
     setOPen(!open);
   };
 
   return (
-    <div className={`collapsible ${props.halfCollapsible}`}>
-      <button className="collapsible__button" onClick={toggle}>
+    <div className="collapsible">
+      <button className="collapsible__button" onClick={handleClickCollapsible}>
         <div className="collapsible__title">{props.title}</div>
         {arrowDirection()}
       </button>

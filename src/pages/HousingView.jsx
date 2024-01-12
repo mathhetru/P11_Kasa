@@ -3,11 +3,22 @@ import Collapsible from "../components/Collapsible";
 import Tags from "../components/Tags";
 import RatingStars from "../components/RatingStars";
 import data from "../data/housing.json";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function Housing() {
   const { id } = useParams();
   const house = data.find((house) => house.id === id);
+
+  useEffect(() => {
+    if (house) {
+      document.title = `${house.host.name} présente : ${house.title}`;
+    }
+  }, [house]);
+
+  if (!house) {
+    return <Navigate to="/page-not-found" />;
+  }
 
   const EquipmentsCollapsible = (content) => {
     if (content.equipments) {
@@ -49,12 +60,8 @@ function Housing() {
         <RatingStars stars={house.rating} />
       </div>
       <div className="housing-description">
-        <Collapsible title={"Description"} halfCollapsible={"half"}>
-          {descriptionCollapsible(house.description)}
-        </Collapsible>
-        <Collapsible title={"Equipements"} halfCollapsible={"half"}>
-          {EquipmentsCollapsible(house)}
-        </Collapsible>
+        <Collapsible title={"Description"}>{descriptionCollapsible(house.description)}</Collapsible>
+        <Collapsible title={"Equipements"}>{EquipmentsCollapsible(house)}</Collapsible>
       </div>
     </div>
   );

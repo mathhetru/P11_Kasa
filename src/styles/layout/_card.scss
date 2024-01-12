@@ -38,3 +38,14 @@
     }
   }
 }
+
+// BREAKPOINT PHONE CARD
+@media screen and (max-width: 1024px) {
+  .accomodation-card {
+    width: 100%;
+    height: 290px;
+    &__text {
+      font-size: $size-phone-title;
+    }
+  }
+}
