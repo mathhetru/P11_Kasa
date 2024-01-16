@@ -12,6 +12,7 @@
   &__text {
     margin: 0;
     font-size: $size-desk-title;
+    text-align: center;
     font-weight: $weight-normal;
   }
   &__link {
@@ -22,5 +23,24 @@
   &__link:hover {
     text-decoration: underline;
     transition: 0.2s linear;
+  }
+}
+
+// BREAKPOINT PHONE ERROR
+@media screen and (max-width: 1024px) {
+  .error {
+    max-width: 90%;
+    &__title {
+      margin: 5rem 0;
+      font-size: $size-phone-404;
+    }
+    &__text {
+      margin: 0;
+      font-size: $size-phone-title;
+    }
+    &__link {
+      margin: 8rem 0;
+      font-size: $size-phone-subtitle;
+    }
   }
 }

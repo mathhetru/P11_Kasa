@@ -1,6 +1,7 @@
 .about {
   margin: 10px auto;
   max-width: 1240px;
+  height: 100%;
   &-collapsibles {
     max-width: 1023px;
     margin: 50px auto 0 auto;
@@ -10,8 +11,8 @@
 // BREAKPOINT PHONE ABOUT
 @media screen and (max-width: 1024px) {
   .about {
+    max-width: 90%;
     &-collapsibles {
-      max-width: 90%;
       margin: 20px auto 20px auto;
     }
   }
