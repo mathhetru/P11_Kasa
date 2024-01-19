@@ -12,7 +12,7 @@ function Housing() {
 
   useEffect(() => {
     if (house) {
-      document.title = `${house.host.name} présente : ${house.title}`;
+      document.title = `${house.title}`;
     }
   }, [house]);
 
